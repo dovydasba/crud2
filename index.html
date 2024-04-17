@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registracija į stovyklą</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="name">Vaiko vardas:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surname">Vaiko pavardė:</label><br>
+        <input type="text" id="surname" name="surname"><br>
+        <label for="birthYear">Vaiko gimimo metai:</label><br>
+        <input type="number" id="birthYear" name="birthYear"><br>
+        <label for="gender">Vaiko lytis:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Vyras</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Moteris</label><br>
+        <label for="email">El. paštas:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone">Telefonas:</label><br>
+        <input type="tel" id="phone" name="phone"><br>
+        <input type="submit" value="Registruotis">
+        <button id="confirmButton" style="display: none;">Patvirtinti</button>
+    </form>
+
+    <table id="registrationsTable">
+        <tr>
+            <th>Vaiko vardas</th>
+            <th>Vaiko pavardė</th>
+            <th>Gimimo metai</th>
+            <th>Lytis</th>
+            <th>El. paštas</th>
+            <th>Telefonas</th>
+        </tr>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
